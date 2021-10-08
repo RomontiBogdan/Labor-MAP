@@ -12,4 +12,14 @@ public class Losungen {
         }
         return notenArr;
     }
+
+    public static int Durchschnittswert(int[] Noten){
+        int summe = 0;
+        for (int note : Noten){
+            summe += note;
+        }
+        return summe/Noten.length;
+    }
+
+    
 }
