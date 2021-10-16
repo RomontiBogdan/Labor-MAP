@@ -1,27 +1,30 @@
 package Aufgaben;
 
 public class Aufgabe1 {
-    /*
-        - Liefert die nicht ausreichende Noten aus einer Menge von Noten
-        Pre: Ein Array von Noten (ganze Zahlen zwischen 0 und 100)
-        Post: Ein Array von nicht ausreichende Noten
-     */
+    /**
+     * Liefert die nicht ausreichende Noten aus einer Menge von Noten
+     * @param Noten
+     * @return Ein Array von nicht ausreichende Noten
+     * */
     public static int[] nichtAusreichendeNoten(int[] Noten){
         int[] notenArr;
         notenArr = new int[Noten.length];
+        int index = 0;
         for (int note : Noten){
             if(note < 38){
-                int index = notenArr.length;
-                notenArr[index] = note;
+                notenArr[index++] = note;
             }
         }
-        return notenArr;
+        int[] noten = new int[index];
+        for(int i = 0; i < index; i++)
+            noten[i] = notenArr[i];
+        return noten;
     }
 
-    /*
-        - Liefert die Durchschnittswert einer Menge von Noten
-        Pre: Ein Array von Noten (ganze Zahlen zwischen 0 und 100)
-        Post: Die Durschnittswert dieser Noten
+    /**
+     * Liefert die Durchschnittswert einer Menge von Noten
+     * @param Noten
+     * @return Durschnittswert dieser Noten
      */
     public static int durchschnittswert(int[] Noten){
         int summe = 0;
@@ -31,10 +34,10 @@ public class Aufgabe1 {
         return summe/Noten.length;
     }
 
-    /*
-        - Liefert ein Array von abgerundete Noten
-        Pre: Ein Array von Noten (ganze Zahlen zwischen 0 und 100)
-        Post: Ein Array mit denselben Noten, aber abgerudet
+    /**
+     * Liefert ein Array von abgerundete Noten
+     * @param Noten
+     * @return  Array mit denselben Noten, aber abgerudet
      */
     public static int[] abgerundeteNoten(int[] Noten){
         for (int i = 0; i < Noten.length; i++) {
@@ -46,10 +49,10 @@ public class Aufgabe1 {
         return Noten;
     }
 
-    /*
-        - Rundet eine Note ab
-        Pre: Eine Note (ganze Zahl zw. 0 u. 100)
-        Post: Der abgerundeten Wert dieser Note
+    /**
+     * Rundet eine Note ab
+     * @param Noten
+     * @return Der abgerundeten Wert dieser Note
      */
     public static int maximaleAbgerundeteNoten(int[] Noten) {
         int maximaleNote = 0;

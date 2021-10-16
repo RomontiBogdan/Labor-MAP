@@ -14,10 +14,9 @@ public class Shop {
         this.USB = USB;
     }
 
-    /*
-    - Findet die Preis der billigste Tastatur
-    Pre: Die Liste von Tastaturen
-    Post: Preis der billigste Tastatur
+    /**
+     * Findet die Preis der billigste Tastatur
+     * @return Preis der billigste Tastatur
      */
     public int billigsteTastatur(){
         int minPreis = this.Tastatur[0];
@@ -28,10 +27,9 @@ public class Shop {
         return minPreis;
     }
 
-    /*
-    - Findet den teuersten Gegenstand aus dem Shop
-    Pre: Die zwei Listen : Tastaturen und USB Laufwerke
-    Post: Die teuerste Gegenstand aus diese Listen
+    /**
+     * Findet den teuersten Gegenstand aus dem Shop
+     * @return Die teuerste Gegenstand aus diese Listen
      */
     public int teuerstenGegenstand(){
         int maxPreis = 0;
@@ -48,10 +46,10 @@ public class Shop {
         return maxPreis;
     }
 
-    /*
-    - Findet den teuersten USB Laufwerk im Bezug einer Budget
-    Pre: Liste von USB Laufwerke und Budget
-    Post: Die teuerste USB Laufwerk im Bezug auf dieser Budget
+    /**
+     * Findet den teuersten USB Laufwerk im Bezug einer Budget
+     * @param budget
+     * @return Die teuerste USB Laufwerk im Bezug auf dieser Budget
      */
     public int teuersteUSB(int budget){
         int maxPreis = -1;
@@ -62,10 +60,10 @@ public class Shop {
         return maxPreis;
     }
 
-    /*
-    - Findet die maximalle Paar Tastatur-USB Laufwerk im Bezug auf Budget
-    Pre: Liste Tastaturen, Liste USB Laufwerke und Budget
-    Post: Die Maximale Geldbetrag von einer Tastatur und USB Laufwerk,
+    /**
+     * Findet die maximalle Paar Tastatur-USB Laufwerk im Bezug auf Budget
+     * @param budget
+     * @return Die Maximale Geldbetrag von einer Tastatur und USB Laufwerk,
           oder -1 wenn keine Paaren im Bezug auf dieser Budget kaufen kann
      */
     public int maxTastaturUsbPreis(int budget){
