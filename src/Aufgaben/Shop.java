@@ -4,11 +4,6 @@ public class Shop {
     private int[] Tastatur;
     private int[] USB;
 
-    public Shop() {
-        this.Tastatur = new int[0];
-        this.USB = new int[0];
-    }
-
     public Shop(int[] tastatur, int[] USB) {
         this.Tastatur = tastatur;
         this.USB = USB;

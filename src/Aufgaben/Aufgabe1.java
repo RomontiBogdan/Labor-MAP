@@ -41,18 +41,20 @@ public class Aufgabe1 {
      */
     public static int[] abgerundeteNoten(int[] Noten){
         for (int i = 0; i < Noten.length; i++) {
-            if(Noten[i] % 5 >= 3)
-                Noten[i] += 5 - Noten[i] % 5;
-            else
-                Noten[i] -= Noten[i] % 5;
+            if(Noten[i] >= 38) {
+                if (Noten[i] % 5 >= 3)
+                    Noten[i] += 5 - Noten[i] % 5;
+                else
+                    Noten[i] -= Noten[i] % 5;
+            }
         }
         return Noten;
     }
 
     /**
-     * Rundet eine Note ab
+     * Findet die maximale abgerundete Note aus einem Array
      * @param Noten
-     * @return Der abgerundeten Wert dieser Note
+     * @return Die maximale abgerundete Note
      */
     public static int maximaleAbgerundeteNoten(int[] Noten) {
         int maximaleNote = 0;
